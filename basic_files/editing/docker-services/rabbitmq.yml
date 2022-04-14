@@ -1,0 +1,16 @@
+  rabbitmq:
+    image: rabbitmq:3.8.19-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: pass
+    ports:
+      - "32005:15672"
+    restart: unless-stopped
+    healthcheck:
+      timeout: 5s
+      interval: 5s
+      retries: 5
+      test:
+        - "CMD"
+        - "rabbitmqctl"
+        - "status"

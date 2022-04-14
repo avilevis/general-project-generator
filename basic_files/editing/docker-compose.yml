@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  ${projectName}:
+    build:
+      context: .
+    restart: always
+    ports:
+      - "${exposePort}:3000"
+    volumes:
+      - ./:/app
+
+${services}

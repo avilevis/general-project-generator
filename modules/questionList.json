@@ -1,0 +1,25 @@
+{
+  "directoryExist": {
+    "type": "confirm",
+    "name": "directory",
+    "message": "Folder exist, would you like to continue?",
+    "default": false,
+    "choices": ["n", "Y"]
+  },
+
+  "dockerYml": {
+    "type": "confirm",
+    "name": "docker",
+    "message": "Would you like to add docker file?",
+    "default": false,
+    "choices": ["n", "Y"]
+  },
+
+  "dockerQuestionTemplate": {
+    "type": "confirm",
+    "name": null,
+    "message": "Would you like to add ${name} container?",
+    "default": false,
+    "choices": ["n", "Y"]
+  }
+}
